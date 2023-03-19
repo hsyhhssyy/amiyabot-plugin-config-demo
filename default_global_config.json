@@ -1,0 +1,4 @@
+{
+    "string_option": "demo-str-global",
+    "array_option": [ "123","456"]
+  }

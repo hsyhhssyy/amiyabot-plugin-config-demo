@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [ "string_option"],
+    "properties": {
+      "string_option": {
+        "title":"这是string_option这个选项的标题 key",
+        "description":"这是这个选项的悬浮提示",
+        "type": "string"
+      },
+      "array_option": {
+        "title":"这是array_option这个选项的标题",
+        "description":"这是这个选项的悬浮提示",
+        "type": "array"
+      },
+      "enum_option_global": {
+        "title":"这是enum_option_global这个选项的标题",
+        "description":"这是这个选项的悬浮提示",
+        "type": "string",
+        "enum": ["option3","option4"]
+      }
+    }
+  }
