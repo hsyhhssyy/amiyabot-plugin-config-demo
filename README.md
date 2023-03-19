@@ -10,10 +10,10 @@
 
 | 方法名          | 参数                                     | 释义      | 异步  |
 |--------------|----------------------------------------|---------|-----|
-| get_channel_config         | channel_id                                  | 读取一个频道级别的配置  | 是   |
-| set_channel_config         | channel_id,json       | 写入一个频道级别的配置  | 是   |
-| get_global_config | 无 | 读取一个全局的配置 | 是   |
-| set_global_config       |  json  | 写入一个全局的配置    | 是   |
+| get_channel_config         | channel_id                                  | 读取一个频道级别的配置  | 否   |
+| set_channel_config         | channel_id,json       | 写入一个频道级别的配置  | 否   |
+| get_global_config | 无 | 读取一个全局的配置 | 否   |
+| set_global_config       |  json  | 写入一个全局的配置    | 否   |
 
 ### PluginInstance的四个新属性（需要由您根据需求创建，默认并不存在）
 
