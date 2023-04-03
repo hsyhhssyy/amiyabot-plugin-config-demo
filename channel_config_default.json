@@ -1,3 +1,4 @@
 {
-  "string_option": "demo-string"
+  "string_option": "demo-string",
+  "enum_option": "option1"
 }

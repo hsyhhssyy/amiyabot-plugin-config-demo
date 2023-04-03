@@ -4,18 +4,18 @@
     "required": [ "string_option"],
     "properties": {
       "string_option": {
-        "title":"这是string_option这个选项的标题 key",
-        "description":"这是这个选项的悬浮提示",
+        "title":"这是一个纯文本配置项",
+        "description":"type为string并且没有其他额外属性就会被识别为纯文本。",
         "type": "string"
       },
       "array_option": {
-        "title":"这是array_option这个选项的标题",
-        "description":"这是这个选项的悬浮提示",
+        "title":"这是一个列表选项",
+        "description":"type为array就会被Console绘制为列表。实际在Json文件中保存为一个string的数组。",
         "type": "array"
       },
       "enum_option_global": {
-        "title":"这是enum_option_global这个选项的标题",
-        "description":"这是这个选项的悬浮提示",
+        "title":"这是一个下拉列表框",
+        "description":"type为string并且提供enum属性，给出可选项的字段，会被Console绘制为下拉列表框。",
         "type": "string",
         "enum": ["option3","option4"]
       }

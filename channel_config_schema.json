@@ -4,13 +4,13 @@
   "required": [ "string_option"],
   "properties": {
     "string_option": {
-      "title":"这是string_option这个选项的标题",
-      "description":"这是这个选项的悬浮提示",
+      "title":"这是一个纯文本",
+      "description":"type为string并且没有其他额外属性就会被识别为纯文本。",
       "type": "string"
     },
     "enum_option": {
-      "title":"这是enum_option这个选项的标题",
-      "description":"这是这个选项的悬浮提示",
+      "title":"另一个下拉列表框",
+      "description":"他和Global配置中的字段名称不同，因此不会被全局覆盖。type为string并且提供enum属性，给出可选项的字段，会被Console绘制为下拉列表框。",
       "type": "string",
       "enum": ["option1", "option2"]
     }
