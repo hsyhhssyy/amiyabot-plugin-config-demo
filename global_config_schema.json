@@ -18,6 +18,16 @@
         "description":"type为string并且提供enum属性，给出可选项的字段，会被Console绘制为下拉列表框。",
         "type": "string",
         "enum": ["option3","option4"]
+      },
+      "boolean_option": {
+        "title":"这是一个布尔值配置项",
+        "description":"设置type为boolean就会变为布尔值配置项，体现为在界面上的一个switch button",
+        "type": "boolean"
+      },
+      "nullable_array_option": {
+        "title":"这是一个可选的数组配置项",
+        "description":"可以设置为空的属性，必须要提供null作为type的一部分。（type既可以是一个值，也可以是一个数组）。不过一般来说，你并不需要这样写，你只需要在default的json中给出空数组[]作为默认值即可。",
+        "type":  ["array", "null"]
       }
     }
   }
