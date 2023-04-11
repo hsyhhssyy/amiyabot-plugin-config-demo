@@ -22,7 +22,7 @@ class PluginConfigDemoPluginInstance(AmiyaBotPluginInstance):
 
 bot = PluginConfigDemoPluginInstance(
     name='插件配置项Demo',
-    version='1.1',
+    version='1.2',
     plugin_id='amiyabot-plugin-config-demo',
     plugin_type='',
     description='帮助开发者了解如何与Console的配置页面对接',
