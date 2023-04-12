@@ -1,5 +1,9 @@
 {
     "string_option": "demo-str-global",
     "array_option": [ "123","456"],
-    "enum_option_global": "option4"
+    "enum_option_global": "option4",
+    "card_option":{
+      "boolean_option_card":true,
+      "number_option_card":0
+    }
   }

@@ -15,14 +15,14 @@ class PluginConfigDemoPluginInstance(AmiyaBotPluginInstance):
         if os.path.exists(config_file):
             yaml_config = read_yaml(config_file, _dict=True)
             for key in object.keys(yaml_config):
-                self.set_config(None, key, yaml_config[key])
+                self.set_config(key, yaml_config[key], None)
 
             os.remove(config_file)
 
 
 bot = PluginConfigDemoPluginInstance(
     name='插件配置项Demo',
-    version='1.2',
+    version='1.4',
     plugin_id='amiyabot-plugin-config-demo',
     plugin_type='',
     description='帮助开发者了解如何与Console的配置页面对接',
