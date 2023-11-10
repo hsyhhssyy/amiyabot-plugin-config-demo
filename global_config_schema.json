@@ -1,49 +1,96 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "required": [ "string_option"],
-    "properties": {
-      "string_option": {
-        "title":"这是一个纯文本配置项",
-        "description":"type为string并且没有其他额外属性就会被识别为纯文本。上面的required中提供了这个属性的名字，会导致这个属性前显示一个红色星号",
-        "type": "string"
-      },
-      "array_option": {
-        "title":"这是一个列表选项",
-        "description":"type为array就会被Console绘制为列表。实际在Json文件中保存为一个string的数组。",
-        "type": "array"
-      },
-      "enum_option_global": {
-        "title":"这是一个下拉列表框",
-        "description":"type为string并且提供enum属性，给出可选项的字段，会被Console绘制为下拉列表框。",
-        "type": "string",
-        "enum": ["option3","option4"]
-      },
-      "boolean_option": {
-        "title":"这是一个布尔值配置项",
-        "description":"设置type为boolean就会变为布尔值配置项，体现为在界面上的一个switch button",
-        "type": "boolean"
-      },      
-      "card_option": {
-        "title":"这是一个卡片配置项",
-        "description":"设置type为object就会变为卡片配置项，在界面上会体现为一个卡片，卡片配置项的description在目前版本不显示。",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "string_option","dynamic_option"
+  ],
+  "properties": {
+    "string_option": {
+      "title": "这是一个纯文本配置项",
+      "description": "type为string并且没有其他额外属性就会被识别为纯文本。上面的required中提供了这个属性的名字，会导致这个属性前显示一个红色星号",
+      "type": "string"
+    },
+    "array_option": {
+      "title": "这是一个列表选项",
+      "description": "type为array就会被Console绘制为列表。实际在Json文件中保存为一个string的数组。",
+      "type": "array"
+    },
+    "array_object_option": {
+      "title": "这是一个列表对象选项",
+      "description": "type为array就会被Console绘制为列表。你可以指定它的类型。",
+      "type": "array",
+      "items": {
         "type": "object",
-        "required": [
-          "boolean_option_card",
-          "number_option_card"
-        ],
-        "properties": {          
-          "boolean_option_card": {
-            "title":"这是一个布尔值配置项",
-            "description":"设置type为boolean就会变为布尔值配置项，体现为在界面上的一个switch button",
+        "properties": {
+          "string_option": {
+            "title": "这是一个纯文本配置项",
+            "description": "type为string并且没有其他额外属性就会被识别为纯文本。上面的required中提供了这个属性的名字，会导致这个属性前显示一个红色星号",
+            "type": "string"
+          },
+          "number_option": {
+            "title": "这是一个数字配置",
+            "description": "数字配置项和文本配置项一样，在前台都会显示一个文本框，目前版本，并不校验他是否是数字，所以可能会读到字符串，请注意。",
+            "type": "integer"
+          },
+          "boolean_option": {
+            "title": "这是一个布尔值配置项",
+            "description": "设置type为boolean就会变为布尔值配置项，体现为在界面上的一个switch button",
             "type": "boolean"
           },
-          "number_option_card": {
-              "title": "这是一个数字配置",
-              "description":"数字配置项和文本配置项一样，在前台都会显示一个文本框，目前版本，并不校验他是否是数字，所以可能会读到字符串，请注意。",
-              "type": "integer"
+          "enum_option": {
+            "title": "这是一个下拉列表框",
+            "description": "type为string并且提供enum属性，给出可选项的字段，会被Console绘制为下拉列表框。",
+            "type": "string",
+            "enum": [
+              "option1",
+              "option2"
+            ]
           }
+        }
       }
+    },
+    "enum_option_global": {
+      "title": "这是一个下拉列表框",
+      "description": "type为string并且提供enum属性，给出可选项的字段，会被Console绘制为下拉列表框。",
+      "type": "string",
+      "enum": [
+        "option3",
+        "option4"
+      ]
+    },
+    "boolean_option": {
+      "title": "这是一个布尔值配置项",
+      "description": "设置type为boolean就会变为布尔值配置项，体现为在界面上的一个switch button",
+      "type": "boolean"
+    },
+    "card_option": {
+      "title": "这是一个卡片配置项",
+      "description": "设置type为object就会变为卡片配置项，在界面上会体现为一个卡片，卡片配置项的description在目前版本不显示。",
+      "type": "object",
+      "required": [
+        "boolean_option_card",
+        "number_option_card"
+      ],
+      "properties": {
+        "boolean_option_card": {
+          "title": "这是一个布尔值配置项",
+          "description": "设置type为boolean就会变为布尔值配置项，体现为在界面上的一个switch button",
+          "type": "boolean"
+        },
+        "number_option_card": {
+          "title": "这是一个数字配置",
+          "description": "数字配置项和文本配置项一样，在前台都会显示一个文本框，目前版本，并不校验他是否是数字，所以可能会读到字符串，请注意。",
+          "type": "integer"
+        }
       }
+    },
+    "dynamic_option": {
+      "title": "这是一个动态配置项",
+      "description": "这个配置项的可选项是从其他插件读出来的(动态生成的)。",
+      "type": "string",
+      "enum": [
+        "---"
+      ]
     }
   }
+}

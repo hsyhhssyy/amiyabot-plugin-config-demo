@@ -1,9 +1,13 @@
 {
     "string_option": "demo-str-global",
-    "array_option": [ "123","456"],
+    "array_option": ["123","456"],
     "enum_option_global": "option4",
+    "array_object_option":[
+      {"string_option":"str"}
+    ],
     "card_option":{
       "boolean_option_card":true,
       "number_option_card":0
-    }
+    },
+    "dynamic_option":"---"
   }
